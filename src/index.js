@@ -13,11 +13,11 @@ module.exports = function toReadable (number) {
       return firstTwenty[number];
   }
 
-  if (numberString.lenght === 2) {
+  if (numberString.length === 2) {
       return (tens[numberString[0]] + ' ' + firstTwenty[numberString[1]]).trim();
   }
 
-  if (numberString.lenght === 3) {
+  if (numberString.length === 3) {
       if (numberString[1] === '0' && numberString[2] == '0') return firstTwenty[numberString[0]] + ' hundred';
       else {
           return (firstTwenty[numberString[0]] + ' ' + hundreds[1] + ' ' + toReadable(+(numberString[1] + numberString[2]))).trim();
